@@ -6,11 +6,11 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:10:00 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:13:51 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 16:48:37 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 int	ft_case_rarb_a(t_stack *a, t_stack *b, int c)
 {

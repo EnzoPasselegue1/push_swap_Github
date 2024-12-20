@@ -6,11 +6,11 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:10:06 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 15:59:43 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 16:53:28 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 void	ft_putstr(char *str)
 {
@@ -39,28 +39,6 @@ static int	count_words(const char *str, char c)
 	return (i);
 }
 
-void	ft_add_back(t_stack **stack, t_stack *stack_new)
-{
-	if (!stack)
-		return ;
-	if (!*stack)
-		*stack = stack_new;
-	else
-		(ft_lstlast(*stack))->next = stack_new;
-}
-
-t_stack	*ft_stack_new(int content)
-{
-	t_stack	*new;
-
-	new = malloc(sizeof(t_stack));
-	if (!new)
-		ft_error();
-	new->value = content;
-	new->next = NULL;
-	return (new);
-}
-
 static char	*word_dup(const char *str, int start, int finish)
 {
 	char	*word;
@@ -80,6 +58,7 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -106,19 +85,4 @@ char	**ft_split(char const *s, char c)
 	}
 	split[j] = 0;
 	return (split);
-}
-
-void	ft_freestr(char **lst)
-{
-	char	*n1;
-
-	if (!lst)
-		return ;
-	while (*lst)
-	{
-		n1 = *lst;
-		lst++;
-		free(n1);
-	}
-	*lst = NULL;
 }

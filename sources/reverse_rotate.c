@@ -6,11 +6,11 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:09:49 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:11:59 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 16:48:37 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 static void	ft_reverse_rotate(t_stack **stack)
 {

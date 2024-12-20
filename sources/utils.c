@@ -6,11 +6,11 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:34:31 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:10:04 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 16:48:37 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 int	ft_atoi(char *str)
 {

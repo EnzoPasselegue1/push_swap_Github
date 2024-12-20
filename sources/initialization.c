@@ -6,11 +6,11 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 17:33:14 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:09:39 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 16:53:37 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 t_stack	*ft_create_stack(int argc, char **argv)
 {
@@ -50,4 +50,26 @@ size_t	ft_get_stack_size(t_stack *stack)
 		tmp = tmp->next;
 	}
 	return (size);
+}
+
+t_stack	*ft_stack_new(int content)
+{
+	t_stack	*new;
+
+	new = malloc(sizeof(t_stack));
+	if (!new)
+		ft_error();
+	new->value = content;
+	new->next = NULL;
+	return (new);
+}
+
+void	ft_add_back(t_stack **stack, t_stack *stack_new)
+{
+	if (!stack)
+		return ;
+	if (!*stack)
+		*stack = stack_new;
+	else
+		(ft_lstlast(*stack))->next = stack_new;
 }
