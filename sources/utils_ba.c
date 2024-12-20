@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_ba.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/20 13:10:00 by enpassel          #+#    #+#             */
+/*   Updated: 2024/12/20 13:13:51 by enpassel         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	ft_case_rarb_a(t_stack *a, t_stack *b, int c)
@@ -50,24 +62,24 @@ int	ft_case_rrarb_a(t_stack *a, t_stack *b, int c)
 	return (i);
 }
 
-int			ft_rotate_type_ba(t_stack *a, t_stack *b)
+int	ft_rotate_type_ba(t_stack *a, t_stack *b)
 {
-    int		i;
-    t_stack	*tmp;
+	int		i;
+	t_stack	*tmp;
 
-    tmp = b;
-    i = ft_case_rrarrb_a(a, b, b->value);
-    while (tmp)
-    {
-        if (i > ft_case_rarb_a(a, b, tmp->value))
-            i = ft_case_rarb_a(a, b, tmp->value);
-        if (i > ft_case_rrarrb_a(a, b, tmp->value))
-            i = ft_case_rrarrb_a(a, b, tmp->value);
-        if (i > ft_case_rarrb_a(a, b, tmp->value))
-            i = ft_case_rarrb_a(a, b, tmp->value);
-        if (i > ft_case_rrarb_a(a, b, tmp->value))
-            i = ft_case_rrarb_a(a, b, tmp->value);
-        tmp = tmp->next;
-    }
-    return (i);
+	tmp = b;
+	i = ft_case_rrarrb_a(a, b, b->value);
+	while (tmp)
+	{
+		if (i > ft_case_rarb_a(a, b, tmp->value))
+			i = ft_case_rarb_a(a, b, tmp->value);
+		if (i > ft_case_rrarrb_a(a, b, tmp->value))
+			i = ft_case_rrarrb_a(a, b, tmp->value);
+		if (i > ft_case_rarrb_a(a, b, tmp->value))
+			i = ft_case_rarrb_a(a, b, tmp->value);
+		if (i > ft_case_rrarb_a(a, b, tmp->value))
+			i = ft_case_rrarb_a(a, b, tmp->value);
+		tmp = tmp->next;
+	}
+	return (i);
 }

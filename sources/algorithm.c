@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algorithm.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/20 13:09:15 by enpassel          #+#    #+#             */
+/*   Updated: 2024/12/20 13:13:27 by enpassel         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 // t_stack *ft_algorithm(int argc, char **argv)
@@ -73,7 +85,7 @@ t_stack	*ft_sub_process(char **argv)
 // 1. It checks if the number of input is less than 2.
 // 2. It checks if the number of input is equal to 2.
 //    If it is, it means it is a quoted string. Call
-//	  another function. <ft_sub_process>
+//		another function. <ft_sub_process>
 // 3. It checks if the number of input is greater than 2.
 //     If it is, it lists the arguements.
 t_stack	*ft_process(int argc, char **argv)

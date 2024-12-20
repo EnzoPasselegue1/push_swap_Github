@@ -51,6 +51,6 @@ fclean:
 re:				fclean all
 
 run:			${NAME}
-				${VALGRIND} ./${NAME} 1 2 3 4 6 5
+				${VALGRIND} ./${NAME} 5 6 45 85 12 45 65 78 12 56 78 45 12
 
 .PHONY:			all clean fclean re valgrind run

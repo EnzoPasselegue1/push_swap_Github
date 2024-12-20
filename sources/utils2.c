@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils2.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/20 13:10:06 by enpassel          #+#    #+#             */
+/*   Updated: 2024/12/20 13:15:17 by enpassel         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    while (*str)
-        write(1, str++, 1);
+	while (*str)
+		write(1, str++, 1);
 }
 
 static int	count_words(const char *str, char c)
@@ -41,7 +53,7 @@ t_stack	*ft_stack_new(int content)
 {
 	t_stack	*new;
 
-	new = malloc(sizeof (t_stack));
+	new = malloc(sizeof(t_stack));
 	if (!new)
 		ft_error();
 	new->value = content;
@@ -61,14 +73,14 @@ static char	*word_dup(const char *str, int start, int finish)
 	word[i] = '\0';
 	return (word);
 }
-size_t ft_strlen(const char *str)
-{
-    size_t i;
 
-    while (str[i])
-        i++;
-    
-    return (i);
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	while (str[i])
+		i++;
+	return (i);
 }
 
 int	ft_isdigit(int c)
@@ -119,4 +131,3 @@ void	ft_freestr(char **lst)
 	}
 	*lst = NULL;
 }
-

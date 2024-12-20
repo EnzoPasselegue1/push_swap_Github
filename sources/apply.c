@@ -6,13 +6,13 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 09:55:09 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/17 11:49:05 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 13:14:02 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int			ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -26,7 +26,6 @@ int			ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
 	}
 	else
 	{
-        write (1, "je suis la5\n", 12);
 		while ((*b)->value != c && ft_find_place_a(*a, c) > 0)
 			ft_rr(a, b);
 		while ((*b)->value != c)
@@ -38,7 +37,7 @@ int			ft_apply_rarb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
-int			ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -52,7 +51,6 @@ int			ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
 	}
 	else
 	{
-        write (1, "je suis la2\n", 12);
 		while ((*b)->value != c && ft_find_place_a(*a, c) > 0)
 			ft_rrr(a, b);
 		while ((*b)->value != c)
@@ -64,7 +62,7 @@ int			ft_apply_rrarrb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
-int			ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -76,7 +74,6 @@ int			ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
 	}
 	else
 	{
-        write (1, "je suis la3\n", 12);
 		while (ft_find_place_a(*a, c) > 0)
 			ft_rra(a);
 		while ((*b)->value != c)
@@ -86,7 +83,7 @@ int			ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s)
 	return (-1);
 }
 
-int			ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s)
+int	ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s)
 {
 	if (s == 'a')
 	{
@@ -98,7 +95,6 @@ int			ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s)
 	}
 	else
 	{
-        write (1, "je suis la4\n", 12);
 		while (ft_find_place_a(*a, c) > 0)
 			ft_ra(a);
 		while ((*b)->value != c)

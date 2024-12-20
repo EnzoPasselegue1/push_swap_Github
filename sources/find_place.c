@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   find_place.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/20 13:09:24 by enpassel          #+#    #+#             */
+/*   Updated: 2024/12/20 13:10:31 by enpassel         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int ft_find_index(t_stack *a, int nbr)
+int	ft_find_index(t_stack *a, int nbr)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (a->value != nbr)
@@ -14,9 +26,9 @@ int ft_find_index(t_stack *a, int nbr)
 	return (i);
 }
 
-int ft_find_place_a(t_stack *a, int nbr)
+int	ft_find_place_a(t_stack *a, int nbr)
 {
-    int		i;
+	int		i;
 	t_stack	*tmp;
 
 	i = 1;
@@ -37,25 +49,25 @@ int ft_find_place_a(t_stack *a, int nbr)
 	return (i);
 }
 
-int ft_find_place_b(t_stack *b, int number)
+int	ft_find_place_b(t_stack *b, int number)
 {
-    int		i;
-    t_stack	*tmp;
+	int		i;
+	t_stack	*tmp;
 
-    i = 1;
-    if (number > b->value && number < ft_lstlast(b)->value)
-        i = 0;
-    else if (number > ft_max(b) || number < ft_min(b))
-        i = ft_find_index(b, ft_max(b));
-    else
-    {
-        tmp = b->next;
-        while (b->value < number || tmp->value > number)
-        {
-            b = b->next;
-            tmp = b->next;
-            i++;
-        }
-    }
-    return (i);
+	i = 1;
+	if (number > b->value && number < ft_lstlast(b)->value)
+		i = 0;
+	else if (number > ft_max(b) || number < ft_min(b))
+		i = ft_find_index(b, ft_max(b));
+	else
+	{
+		tmp = b->next;
+		while (b->value < number || tmp->value > number)
+		{
+			b = b->next;
+			tmp = b->next;
+			i++;
+		}
+	}
+	return (i);
 }
