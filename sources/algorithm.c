@@ -6,7 +6,7 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:09:15 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:13:27 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 15:03:23 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,6 @@ t_stack	*ft_process(int argc, char **argv)
 
 	i = 1;
 	a = NULL;
-	if (argc < 2)
-		ft_error();
 	if (argc == 2)
 		a = ft_sub_process(argv);
 	else

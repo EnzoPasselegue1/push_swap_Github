@@ -6,7 +6,7 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 16:52:27 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:52:15 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 15:16:14 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		ft_error();
-	a = ft_process(argc, argv);
+    if (ft_check_input(argc, argv) == 0)
+        ft_error();
+    a = ft_process(argc, argv);
 	if (!ft_is_sorted(a))
 		ft_sort(&a);
 	ft_free(&a);

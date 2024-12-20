@@ -6,7 +6,7 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:10:06 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:15:17 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 15:18:17 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,15 +72,6 @@ static char	*word_dup(const char *str, int start, int finish)
 		word[i++] = str[start++];
 	word[i] = '\0';
 	return (word);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	while (str[i])
-		i++;
-	return (i);
 }
 
 int	ft_isdigit(int c)

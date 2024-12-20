@@ -29,6 +29,7 @@ SRCS 			= $(addprefix $(SRCS_DIR),\
 					utils_ba.c \
 					utils.c \
 					utils2.c \
+					checker.c \
 					free.c \
                     main.c)
 

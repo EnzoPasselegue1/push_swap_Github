@@ -6,7 +6,7 @@
 /*   By: enpassel <enpassel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:11:01 by enpassel          #+#    #+#             */
-/*   Updated: 2024/12/20 13:11:02 by enpassel         ###   ########lyon.fr   */
+/*   Updated: 2024/12/20 15:18:46 by enpassel         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ int					ft_isdigit(int c);
 char				**ft_split(char const *s, char c);
 t_stack				*ft_stack_new(int content);
 void				ft_add_back(t_stack **stack, t_stack *stack_new);
+int                 ft_check_input(int argc, char **argv);
+size_t              ft_strlen(const char *str);
 
 void				ft_sa(t_stack **a);
 void				ft_sb(t_stack **b);
